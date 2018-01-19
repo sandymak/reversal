@@ -1,0 +1,19 @@
+# If applied, this commit will...
+Subject line (try to keep under 60 characters)
+
+Multi-line description of commit,
+feel free to be detailed.
+
+[Ticket: X]
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+
+# Why is this change needed?
+Prior to this change,
+
+# How does it address the issue?
+This change
+
+# Provide links to any relevant tickets, articles or other resources
+
+# On branch master
