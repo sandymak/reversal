@@ -3,6 +3,7 @@ import React, {Component} from 'react'
 // Component
 import Scoreboard from './Scoreboard.js'
 import Arrows from './Arrows.js'
+import GameContainer from './GameContainer.js'
 
 class Main extends Component {
   constructor() {
@@ -17,10 +18,7 @@ class Main extends Component {
 
     return (
       <div>
-        <h1>Reversal</h1>
-        <Scoreboard currentScore={currentScore} />
-        <br />
-        <Arrows />
+          <GameContainer currentScore={currentScore} />
       </div>
     )
   }

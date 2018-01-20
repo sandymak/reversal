@@ -13,30 +13,32 @@ class Arrows extends Component {
     let {currentScore} = this.state;
 
     return (
-      <div>
-        <div>
-          <a href="#">
-            <span className="left" />
-          </a>
-        </div>
+      <div className="container">
+        <div className="flexwrap">
+          <div className="arrow-container">
+            <a href="#">
+              <span className="left" />
+            </a>
+          </div>
 
-        <div>
-          <a href="#">
-            <span className="top" />
-          </a>
-        </div>
+        {/* <div>
+            <a href="#">
+              <span className="top" />
+            </a>
+          </div>
 
-        <div>
-          <a href="#">
-            <span className="bottom" />
-          </a>
-        </div>
+          <div>
+            <a href="#">
+              <span className="bottom" />
+            </a>
+          </div>
 
-        <div>
-          <a href="#">
-            <span className="right" />
-          </a>
-        </div>
+          <div>
+            <a href="#">
+              <span className="right" />
+            </a>
+        </div>*/}
+      </div>
       </div>
     )
   }
