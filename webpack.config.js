@@ -9,7 +9,7 @@ module.exports = {
   },
   devtool: 'source-map',
   module: {
-    rules: [
+    loaders: [
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,

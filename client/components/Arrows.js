@@ -1,47 +1,17 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-
-class Arrows extends Component {
-  constructor() {
-    super()
-    this.state = {
-      currentScore: 0
-    }
-  }
-
-  render() {
-    let {currentScore} = this.state;
-
-    return (
-      <div className="container">
-        <div className="flexwrap">
-          <div className="arrow-container">
-            <a href="#">
-              <span className="left" />
-            </a>
-          </div>
-
-        {/* <div>
-            <a href="#">
-              <span className="top" />
-            </a>
-          </div>
-
-          <div>
-            <a href="#">
-              <span className="bottom" />
-            </a>
-          </div>
-
-          <div>
-            <a href="#">
-              <span className="right" />
-            </a>
-        </div>*/}
+const Arrows = (props) => {
+  return (
+    <div className="container">
+      <div className="flexwrap">
+      <div className="arrow-container">
+      <a href="#" className={`${props.arrowClr}`}>
+           <span className={`${props.arrowDir}`} />
+      </a>
+         </div>
       </div>
-      </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default Arrows
