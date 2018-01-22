@@ -4,48 +4,41 @@ const initialState = { gameStatus: 'new', remainingSeconds: 5 };
 // ACTION TYPE
 const SET_GAME_STATUS = 'SET_GAME_STATUS';
 const SET_REMAINING_SECONDS = 'SET_REMAINING_SECONDS';
+const RESET_REMAINING_SECONDS = 'RESET_REMAINING_SECONDS';
 
 export const setGameStatus = (gameStatus) => {
   const action = {
     type: SET_GAME_STATUS,
     gameStatus
   }
+  return action
 }
 
-export const setRemaningSeconds = (remainingSeconds) => {
+export const setRemainingSeconds = () => {
   const action = {
     type: SET_REMAINING_SECONDS,
-    remainingSeconds
   }
+  return action
 }
 
-// begin the game, which start 60sec timer.
-export const startGame = () => {
-  this.setState({ gameStatus: 'playing'}, () => {
-    this.intervalId = setInterval(() => {
-      this.setState(prevState => {
-        const newRemainingSeconds = prevState.remainingSeconds -1;
-        if (newRemainingSeconds === 0) {
-          clearInterval(this.intervalId);
-          return {gameStatus: 'lost', remainingSeconds: 0, currentScore: 0};
-        }
-        return {remainingSeconds: newRemainingSeconds}
-      });
-    }, 1000);
-  });
-};
+export const resetRemainingSeconds = () => {
+  const action = {
+    type: RESET_REMAINING_SECONDS,
+  }
+  return action
+}
 
 const countDownReducer = (state = initialState, action) => {
   switch (action.type) {
 
-    case SET_ARR_DIR:
-      return {...state, arrowDir: action.arrowDir}
+    case SET_GAME_STATUS:
+      return {...state, gameStatus: action.gameStatus }
 
-    case SET_ARR_CLR:
-      return {...state, arrowClr: action.arrowClr}
+    case SET_REMAINING_SECONDS:
+      return {...state, remainingSeconds: --state.remainingSeconds}
 
-    case SET_KEYSTROKE:
-      return {...state, keyStroke: action.keyStroke}
+    case RESET_REMAINING_SECONDS:
+      return {...state, remainingSeconds: 5}
 
     default:
       return state

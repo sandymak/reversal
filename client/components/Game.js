@@ -2,16 +2,14 @@ import React, {Component} from 'react'
 
 // Redux Store
 import { connect } from 'react-redux';
-import { setArrDir, setKeyStroke } from '../store/reducers/arrowInfo'
-import { addScore, minusScore } from '../store/reducers/scoreboard'
 
 // Component
 import Scoreboard from './Scoreboard.js'
 import Arrows from './Arrows.js'
 
 // utils
-import { startGame } from '../utils'
-import { regularMode} from '../store/utils/gameplay';
+import { regularMode } from '../store/utils/gameplay';
+import { startGame } from '../store/utils/timer';
 
 
 // keyStroke directions
@@ -30,14 +28,10 @@ class Game extends Component {
   }
 
   componentDidMount() {
-    if (this.props.autoPlay) {
-      startGame();
-    }
     document.addEventListener('keydown', this.handleKeyDown.bind(this));
   }
 
   componentWillUnmount() {
-    clearInterval(this.intervalId);
     document.removeEventListener('keydown', this.handleKeyDown.bind(this));
   }
 
@@ -55,8 +49,7 @@ class Game extends Component {
   }
 
   render() {
-    // const { gameStatus, remainingSeconds} = this.state;
-    const { arrowDir, arrowClr, score } = this.props;
+    const { arrowDir, arrowClr, score, gameStatus, remainingSeconds } = this.props;
 
     return (
       <div className="game">
@@ -64,19 +57,20 @@ class Game extends Component {
           Type the reversed direction of the arrow shown on screen
         </div>
         <div className="nav">
-        {gameStatus === 'new' &&
-          <button onClick={this.startGame}>Start</button>
+        {gameStatus && gameStatus === 'new' &&
+          <button onClick={startGame}>Start</button>
         }
 
-        {gameStatus === 'playing' &&
+        {remainingSeconds && gameStatus === 'playing' &&
           <div className="timer-value">{remainingSeconds}</div>
         }
 
         {['won', 'lost'].includes(gameStatus) &&
-          <button onClick={this.props.onPlayAgain}>
+          <button onClick={startGame}>
             Play Again
           </button>
         }
+        <br />
         <Scoreboard currentScore={score}/>
         <br />
         <hr />
@@ -96,18 +90,11 @@ function mapStateToProps (storeState) {
     keyStroke: storeState.arrowInfo.keyStroke,
     gameMode: storeState.arrowInfo.gameMode,
     score: storeState.scoreboard.score,
+    remainingSeconds: storeState.countDown.remainingSeconds,
+    gameStatus: storeState.countDown.gameStatus,
   }
 }
 
-function mapDispatchToProps (dispatch) {
-  return {
-    updateArrDir: () => dispatch(setArrDir()),
-    updateKeyStroke: () => dispatch(setKeyStroke()),
-    increaseScore: () => dispatch(addScore()),
-    decreaseScore: () => dispatch(minusScore()),
-  }
-}
-
-const ConnectedGame = connect(mapStateToProps, mapDispatchToProps)(Game)
+const ConnectedGame = connect(mapStateToProps)(Game)
 
 export default ConnectedGame
