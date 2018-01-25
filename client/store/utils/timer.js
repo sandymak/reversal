@@ -10,7 +10,7 @@ export const startGame = () => {
   const intervalId = setInterval(() => {
   const storeState = store.getState().countDown.remainingSeconds
     if (storeState === 0) {
-      store.dispatch(setGameStatus('lost'))
+      store.dispatch(setGameStatus('game-over'))
       store.dispatch(resetRemainingSeconds())
       clearInterval(intervalId);
     } else {

@@ -1,5 +1,6 @@
 html {
-  background:  url(https://i.imgur.com/YZWnjBM.gif) no-repeat center center fixed;
+  /* background:  url(https://i.imgur.com/YZWnjBM.gif) no-repeat center center fixed; */
+  background:  url(https://static.tumblr.com/3b3f040657b598643611b7c20638d413/tsu0qqs/jjMn6vkbg/tumblr_static_tumblr_static_eewtd0bly144ok0sgok4ccc4k_640.gif) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -8,9 +9,14 @@ body {
   padding: 0;
   text-align: center;
   font-family: Helvetica, 'sans-serif';
-  color: rgba(0,0,0,0.70);
+  /* color: rgba(0,0,0,0.70); */
+  color: whitesmoke;
   /* background-color: #1abc9c; */
   overflow: hidden;
+}
+
+h1 {
+  font-family: cursive;
 }
 
 a {
@@ -38,8 +44,8 @@ div {
 }
 
 .timer-value {
-  color: rgba(0,0,0,0.70);
-  font-size: 1rem; }
+  color: whitesmoke;
+  font-size: 2rem; }
 
 .game {
   display: inline-flex; flex-direction: column;

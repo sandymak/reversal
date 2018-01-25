@@ -54,7 +54,7 @@ class Game extends Component {
     return (
       <div className="game">
         <div className="help">
-          Type the reversed direction of the arrow shown on screen
+          Type the direction of the arrow shown on screen
         </div>
         <div className="nav">
         {gameStatus && gameStatus === 'new' &&
@@ -65,7 +65,14 @@ class Game extends Component {
           <div className="timer-value">{remainingSeconds}</div>
         }
 
-        {['won', 'lost'].includes(gameStatus) &&
+        {remainingSeconds === 0 && gameStatus === 'game-over' &&
+          <div
+          className = "game-over"
+          style={{width: '100', height: '100'}}>
+          {`Your score is ${score}`}
+        </div>}
+
+        {['game-over', 'lost'].includes(gameStatus) &&
           <button onClick={startGame}>
             Play Again
           </button>

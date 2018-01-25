@@ -1,10 +1,18 @@
-a.correct .left, a.correct .top, a.correct .bottom, a.correct .right{
+/* a.correct .left, a.correct .top, a.correct .bottom, a.correct .right{
   border: 0.5em solid whitesmoke;
 }
 
 a.correct .left:after, a.correct .top:after, a.correct .bottom:after, a.correct .right:after {
   border-top: 0.5em solid  whitesmoke;
   border-right: 0.5em solid whitesmoke;
+} */
+a.correct .left, a.correct .top, a.correct .bottom, a.correct .right{
+  border: 0.5em solid #1abc9c;
+}
+
+a.correct .left:after, a.correct .top:after, a.correct .bottom:after, a.correct .right:after {
+  border-top: 0.5em solid  #1abc9c;
+  border-right: 0.5em solid #1abc9c;
 }
 
 a.incorrect .left, a.incorrect .top, a.incorrect .bottom, a.incorrect .right{
@@ -24,13 +32,13 @@ a.incorrect .left:after, a.incorrect .top:after, a.incorrect .bottom:after, a.in
   overflow: hidden;
 }
 
-.arrow-correct-color{
+/* .arrow-correct-color{
   border: 0.5em solid whitesmoke;
 }
 
 .arrow-incorrect-color{
   border: 0.5em solid red;
-}
+} */
 
 .left {
   display: inline-block;
@@ -39,7 +47,7 @@ a.incorrect .left:after, a.incorrect .top:after, a.incorrect .bottom:after, a.in
   left: 1%;
   width: 4em;
   height: 4em;
-  border: 0.5em solid rgba(0,0,0,0.70);
+  border: 0.5em solid whitesmoke;
   border-radius: 50%;
   margin: auto;
 
@@ -52,8 +60,8 @@ a.incorrect .left:after, a.incorrect .top:after, a.incorrect .bottom:after, a.in
   margin-left: 0.6em;
   width: 1.4em;
   height: 1.4em;
-  border-top: 0.5em solid rgba(0,0,0,0.70);
-  border-right: 0.5em solid rgba(0,0,0,0.70);
+  border-top: 0.5em solid whitesmoke;
+  border-right: 0.5em solid whitesmoke;
   -moz-transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
   transform: rotate(-135deg);
@@ -66,7 +74,7 @@ a.incorrect .left:after, a.incorrect .top:after, a.incorrect .bottom:after, a.in
   left: 1%;
   width: 4em;
   height: 4em;
-  border: 0.5em solid rgba(0,0,0,0.70);
+  border: 0.5em solid whitesmoke;
   border-radius: 50%;
   margin: auto;
 
@@ -78,8 +86,8 @@ a.incorrect .left:after, a.incorrect .top:after, a.incorrect .bottom:after, a.in
   margin-top: 1.4em;
   width: 1.4em;
   height: 1.4em;
-  border-top: 0.5em solid rgba(0,0,0,0.70);
-  border-right: 0.5em solid rgba(0,0,0,0.70);
+  border-top: 0.5em solid whitesmoke;
+  border-right: 0.5em solid whitesmoke;
   -moz-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -92,7 +100,7 @@ a.incorrect .left:after, a.incorrect .top:after, a.incorrect .bottom:after, a.in
   left: 1%;
   width: 4em;
   height: 4em;
-  border: 0.5em solid rgba(0,0,0,0.70);
+  border: 0.5em solid whitesmoke;
   border-radius: 50%;
   margin: auto;
 
@@ -104,8 +112,8 @@ a.incorrect .left:after, a.incorrect .top:after, a.incorrect .bottom:after, a.in
   margin-top: 0.6em;
   width: 1.4em;
   height: 1.4em;
-  border-top: 0.5em solid rgba(0,0,0,0.70);
-  border-right: 0.5em solid rgba(0,0,0,0.70);
+  border-top: 0.5em solid whitesmoke;
+  border-right: 0.5em solid whitesmoke;
   -moz-transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
@@ -118,7 +126,7 @@ a.incorrect .left:after, a.incorrect .top:after, a.incorrect .bottom:after, a.in
   left: 1%;
   width: 4em;
   height: 4em;
-  border: 0.5em solid rgba(0,0,0,0.70);
+  border: 0.5em solid whitesmoke;
   border-radius: 50%;
   margin: auto;
 
@@ -131,8 +139,8 @@ a.incorrect .left:after, a.incorrect .top:after, a.incorrect .bottom:after, a.in
   margin-left: -0.6em;
   width: 1.4em;
   height: 1.4em;
-  border-top: 0.5em solid rgba(0,0,0,0.70);
-  border-right: 0.5em solid rgba(0,0,0,0.70);
+  border-top: 0.5em solid whitesmoke;
+  border-right: 0.5em solid whitesmoke;
   -moz-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
