@@ -14,10 +14,10 @@ import { startGame } from '../store/utils/timer';
 
 // keyStroke directions
 const directions = {
-  '37': 'left',
-  '38': 'top',
-  '39': 'right',
-  '40': 'bottom'
+  37: 'left',
+  38: 'top',
+  39: 'right',
+  40: 'bottom'
 }
 
 class Game extends Component {
@@ -78,7 +78,7 @@ class Game extends Component {
           </button>
         }
         <br />
-        <Scoreboard currentScore={score}/>
+        <Scoreboard currentScore={score} />
         <br />
         <hr />
         <br />
